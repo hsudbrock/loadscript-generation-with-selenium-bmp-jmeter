@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile('net.lightbody.bmp:browsermob-proxy:2.0.0') { exclude group: 'org.jboss.shrinkwrap.resolver' }
+	
+    compile('org.apache.jmeter:ApacheJMeter_http:2.12') { exclude group: 'd-haven-managed-pool'; exclude group: 'xml-apis'; exclude group: 'org.bouncycastle' }
+    compile('org.apache.jmeter:ApacheJMeter_java:2.12') { exclude group: 'd-haven-managed-pool'; exclude group: 'xml-apis'; exclude group: 'org.bouncycastle' }
+    
+    compile('org.seleniumhq.selenium:selenium-java:2.46.0')
+}
+
+mainClassName = 'de.accso.hsudbrock.loadscriptgenerator.ExampleLoadScriptGenerator'
