@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-	compile('net.lightbody.bmp:browsermob-proxy:2.0.0') { exclude group: 'org.jboss.shrinkwrap.resolver' }
+    compile('net.lightbody.bmp:browsermob-proxy:2.0.0') { exclude group: 'org.jboss.shrinkwrap.resolver' }
 	
     compile('org.apache.jmeter:ApacheJMeter_http:2.12') { exclude group: 'd-haven-managed-pool'; exclude group: 'xml-apis'; exclude group: 'org.bouncycastle' }
     compile('org.apache.jmeter:ApacheJMeter_java:2.12') { exclude group: 'd-haven-managed-pool'; exclude group: 'xml-apis'; exclude group: 'org.bouncycastle' }
